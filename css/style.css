@@ -1,0 +1,531 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../font-family/Poppins/Poppins-Medium.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* margin: -20px 0 0 0; */
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    color: black;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/* Header */
+
+header {
+    background-color: #f2f2f2;
+    box-shadow: inset 0 -1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 85px;
+}
+
+.loading {
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.logo {
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+
+.logo img {
+    width: 200px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.navbar {
+    font-weight: 500;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.nav-link {
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid #08c1bb;
+}
+
+.nav-link-blue {
+    transition: 0.4s;
+    border-radius: 20px;
+    background-color: #03b1fc;
+    color: white;
+}
+
+.nav-link-blue:hover {
+    transition: 0.4s;
+    background-color: #0394fc;
+    border: none;
+}
+
+.nav-icon {
+    margin-left: 40px;
+}
+
+.font-icons {
+    animation: social-icon-out 0.5s;
+    animation-fill-mode: forwards;
+    transition: 0.4s;
+    font-size: 28px;
+    color: #03b1fc;
+}
+
+.font-icons:hover {
+    animation-name: social-icons-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transition: 0.4s;
+    color: #ff66ff;
+}
+
+.nav-icon a {
+    padding: 0 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e6e6e6;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 10s;
+}
+
+.link-awesome::after {
+    content: '\f107';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 6px;
+}
+
+/* Main */
+
+.intro {
+    background-image: url(../imgs/bg01.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120vh;
+}
+
+/* .intro-sec::before {
+    content: 'aa';
+    position: relative;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+} */
+
+.intro-sec {
+    margin-left: 100px;
+    width: 50vw;
+    text-align: center;
+    animation-name: fadeInLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro-texto {
+    color: #f2f2f2;
+    letter-spacing: 1.75px;
+}
+
+.intro-texto h1 {
+    font-size: 60px;
+}
+
+.intro-texto p {
+    font-size: 21px;
+}
+
+.intro-btn {
+    margin-top: 30px;
+}
+
+.redirec-btn a {
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 30px !important;
+    display: block;
+    background-color: #ff80ff;
+    transition: 0.4s;
+}
+
+.redirec-btn a:hover {
+    transition: 0.4s;
+    background-color: #ff66ff;
+}
+
+.groups {
+    background-color: #f2f2f2;
+}
+
+.group-box {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -80px;
+    z-index: 10;
+}
+
+.group-itens {
+    box-shadow: 5px 5px 10px #d2cfcf, -5px -5px 10px #d2d2d2;
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    vertical-align: middle;
+    opacity: 0;
+}
+
+.group-itens p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #808080;
+    letter-spacing: 1.4px;
+    font-size: 15px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.group-itens p::before {
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+.group-itens p::after {
+    content: '\f10e';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: relative;
+    bottom: -5px;
+    right: -5px;
+}
+
+.first {
+    animation-delay: 0.1s;
+}
+
+.second {
+    animation-delay: 0.3s;
+}
+
+.third {
+    animation-delay: 0.6s;
+}
+
+.fourth {
+    animation-delay: 0.9s;
+}
+
+.fifth {
+    animation-delay: 1.2s;
+}
+
+.sixth {
+    animation-delay: 1.5s;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeOutDown {
+    animation-name: fadeOutDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#footer {
+    background-color: #323639;
+    width: 100%;
+    height: 30vh;
+}
+
+.info {
+    width: 600px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    color: white;
+    text-align: center;
+}
+
+.info h3 {
+    margin-bottom: 20px;
+}
+
+.contact-phone, .contact-email, .website-map {
+    margin: 50px 20px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 200px;
+}
+
+.contact-phone p::before {
+    content: '\f87b';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.contact-email p::before {
+    content: '\f0e0';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.quick-item {
+    margin-top: 10px;
+}
+
+.quick-link a {
+    display: block;
+    color: white;
+    transition: 0.2s;
+}
+
+.quick-link a:hover {
+    transition: 0.2s;
+    color: #0394fc;
+}
+
+.animation {
+    opacity: 0;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-500px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 70px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeOutDown {
+    to {
+        opacity: 0;
+        transform: translate3d(0, 70px, 0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes social-icons-in {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes social-icons-out {
+    from {
+        transform: scale(1.3);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 570px) {}
+
+@media (max-width: 760px) {}
+
+@media (max-width: 990px) {}
+
+@media (max-width: 1200px) {}
+
+
+/***********************Pagina 1***********************/
+
+.intropg1 {
+    background-image: url(../imgs/Pagina-1/pg1-1.jpg); /*https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fsaobernardo.com%2Fblog%2Fautismo-em-bebe-como-identificar%2F&psig=AOvVaw2jUaKl1G10GaACHfYIWcA4&ust=1605639851331000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjSqfbhh-0CFQAAAAAdAAAAABAD*/
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120vh;
+}
+.intro-secpg1 {
+    margin-left: 30px;
+    width: 90vw;
+    text-align: center;
+    animation-name: fadeInLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro-textopg1 {
+    color: #352e2e;
+    text-align: center;
+    animation-name: fadeInLeft;
+    display: flex;
+    font-size: 20px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    letter-spacing: 1.75px;
+}
+
+.intro-h1{
+    text-align: center;
+}
+
+/***********************Pagina 2***********************/
+
+.intropg2 {
+    background-image: url(../imgs/Pagina-2/pg2-1.jpg); /*https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fsistemapequenino.com.br%2Fo-autismo-e-seus-niveis-de-gravidade%2F&psig=AOvVaw0EfcWL-_tIZWW3-K3weN63&ust=1605642492659000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJC9mc3qh-0CFQAAAAAdAAAAABAE*/
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120vh;
+}
+
+.intro-secpg2 {
+    margin-left: 30px;
+    width: 90vw;
+    text-align: center;
+    animation-name: fadeInLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro-textopg2 {
+    color: #110f0f;
+    text-align: center;
+    animation-name: fadeInLeft;
+    display: flex;
+    font-size: 20px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    letter-spacing: 1.75px;
+}
+
+.info-pg2 {
+    width: 600px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    letter-spacing: 1.2px;
+    color: rgb(12, 10, 10);
+    text-align: center;
+}
+
+.intro-textopg2-p {
+    font-size: 21px;
+    text-align: center;
+}
